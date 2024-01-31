@@ -1,9 +1,9 @@
-.mymain 
+.mymain , .loginFormContainer
 {
  display: flex;
  align-items: center;
 }
-
+/*- Home page ---------------------------------------------------- */
 .homeContainer
 {
  display: flex;
@@ -21,8 +21,6 @@
  width: 400px;
 
  height: 500px;
-
- background: blure;
 }
 
 .welcomeContainer
@@ -49,4 +47,46 @@
 
  font-size: 14px;
  cursor: pointer;
+}
+/*- Login page --------------------------------------------------- */
+.loginForm
+{
+ display: flex;
+ flex-direction: column;
+   
+ background-blend-mode: multiply; /* this will blend the background image with the blur effect */
+ backdrop-filter: blur(10px); 
+ -webkit-backdrop-filter: blur(10px);
+   
+ text-align: center;
+   
+ border: 2px solid black;
+   
+ width: 400px;  
+ height: 500px;
+
+}
+
+.emailInput , .passwordInput
+{
+ background-color: transparent;
+
+ border: 1px solid rgb(255, 123, 0);
+ border-radius: 4px;
+
+ margin: 80px 50px 0px 50px;
+ padding: 10px;
+
+ color: black;
+ font-size: 16px;
+}
+
+.passwordInput
+{
+ margin: 20px 50px 0px 50px;
+}
+
+.submit
+{
+
 }
