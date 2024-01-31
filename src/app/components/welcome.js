@@ -11,10 +11,13 @@ export default function Welcome()
 
             <div className={styles.logSignContainer}>  
 
-                <Link href="../sign-up" className={styles.signLog}>sign up </Link>      
+                <button className={styles.signLog}>
+                  <Link href="../sign-up" >sign up </Link>      
+                </button>
 
-                <Link href="../login" className={styles.signLog}>log in</Link>
-            
+                <button className={styles.signLog}>
+                  <Link href="../login" >log in</Link>
+                </button>            
             </div>
           </div>
          )

@@ -6,6 +6,7 @@ export default function Home()
   return (
           <main className={styles.mymain}>
             <Welcome />
+
           </main>
          );
 }
