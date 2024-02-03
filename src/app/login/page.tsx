@@ -10,7 +10,7 @@ export default function page() {
 
   return (
           <div className={styles.loginFormContainer}>
-            <form className={styles.loginForm}>
+            <form className={styles.loginForm}  onSubmit={e => e.preventDefault()} >
 
                <input className={styles.emailInput} type='email' placeholder='Email'
                       onChange={(e) => {setEmail(e.currentTarget.value)}}></input>
