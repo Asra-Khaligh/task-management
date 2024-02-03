@@ -67,7 +67,8 @@
 
 }
 
-.emailInput , .passwordInput
+/*- Inputs -------------------------------------------------------- */
+.topInput , .otherInputs
 {
  background-color: transparent;
 
@@ -81,7 +82,7 @@
  font-size: 16px;
 }
 
-.passwordInput
+.otherInputs
 {
  margin: 20px 50px 0px 50px;
 }
@@ -97,6 +98,21 @@
  margin: 200px 150px 0px 150px;
  padding: 10px;
    
+ color: white;
+ font-size: 16px;
+}
+
+.signUp
+{
+ background-color: transparent;
+
+ border: 1px solid rgb(144, 0, 139);
+    
+ border-radius: 4px;
+      
+ margin: 85px 150px 0px 150px;
+ padding: 10px;
+      
  color: white;
  font-size: 16px;
 }
