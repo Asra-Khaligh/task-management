@@ -18,7 +18,7 @@ export default function loginPage() {
             <form className={styles.loginForm}>
 
                <input className={styles.topInput} id='name' type='email' placeholder='Name'
-                      onChange={(e) => {setEmail(e.currentTarget.value)}}></input>
+                      onChange={(e) => {setName(e.currentTarget.value)}}></input>
 
                <input className={styles.otherInputs} id='email' type='email' placeholder='Email'
                       onChange={(e) => {setEmail(e.currentTarget.value)}}></input>
@@ -27,7 +27,7 @@ export default function loginPage() {
                       onChange={(e) => {setPassword(e.currentTarget.value)}}></input>
                 
                <input className={styles.otherInputs} id='password_confirmation' type='password' placeholder='password confirmation'
-                      onChange={(e) => {setPassword(e.currentTarget.value)}}></input>
+                      onChange={(e) => {setConfirmPassword(e.currentTarget.value)}}></input>
                
                <input type='submit' value='sign up' className={styles.signUp}></input>
 
