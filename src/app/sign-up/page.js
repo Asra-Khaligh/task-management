@@ -2,20 +2,34 @@
 
 import styles from '../page.module.css'
 import { useState } from "react";
-import { LoginData } from "../services/initial.service"
 
 export default function loginPage() {
 
-  const [name,  setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const [password_confirmation,  setConfirmPassword] = useState<string>('')
+  const [name,  setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordConfirmation,  setConfirmPassword] = useState('')
 
-  const [formData, setFormData] = useState<LoginData>({ email: '', password: '' });
+  
+  const handleSubmit = async (e) =>
+       {
+        e.preventDefault();
+        fetch('/register', 
+              {
+               method: 'post',
+               body: JSON.stringify({
+                                     name:name,
+                                     email: email,
+                                     password: password,
+                                     password_confirmation: passwordConfirmation
+                                    })
+              })
+       };
+
 
   return (
           <div className={styles.loginFormContainer}>
-            <form className={styles.loginForm}>
+            <form className={styles.loginForm} onSubmit={handleSubmit}>
 
                <input className={styles.topInput} id='name' type='email' placeholder='Name'
                       onChange={(e) => {setName(e.currentTarget.value)}}></input>
