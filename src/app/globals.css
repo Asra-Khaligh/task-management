@@ -1,3 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+ .font-outline-2 {
+  -webkit-text-stroke: 1px black;
+  paint-order: stroke fill;
+ }
+}
+
 body
 {
  display: flex;
