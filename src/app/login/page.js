@@ -11,14 +11,23 @@ export default function loginPage() {
   const handleSubmit = async (e) =>
        {
         e.preventDefault();
-        fetch('/login', 
-              {
-               method: 'post',
-               body: JSON.stringify({
-                                     email: email,
-                                     password: password
-                                    })
-              })
+        const res = await fetch('/login', 
+                               {
+                                method: 'POST',
+                                headers:{
+                                         'Content-Type':  'application/json',
+                                        },
+                                body: JSON.stringify({
+                                                      email: email,
+                                                      password: password
+                                                     })
+                               })
+                               .then((response) =>
+                                     {
+                                      if(response.status === '200')
+                                      redirect('../user-page/page.js', 'replace')
+                                     }
+                                ) 
        };
 
 

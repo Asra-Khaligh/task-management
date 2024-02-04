@@ -14,16 +14,25 @@ export default function loginPage() {
   const handleSubmit = async (e) =>
        {
         e.preventDefault();
-        fetch('/register', 
-              {
-               method: 'post',
-               body: JSON.stringify({
-                                     name:name,
-                                     email: email,
-                                     password: password,
-                                     password_confirmation: passwordConfirmation
-                                    })
-              })
+        const res = await fetch('/register', 
+                               {
+                                method: 'POST',
+                                headers:{
+                                         'Content-Type':  'application/json',
+                                        },
+                                body: JSON.stringify({
+                                                      name:name,
+                                                      email: email,
+                                                      password: password,
+                                                      password_confirmation: passwordConfirmation
+                                                     })
+                               })
+                          .then((response) =>
+                                         {
+                                          if(response.status === '200')
+                                             redirect('../user-page/page.js', 'replace')
+                                         }
+                               ) 
        };
 
 
@@ -31,7 +40,7 @@ export default function loginPage() {
           <div className={styles.loginFormContainer}>
             <form className={styles.loginForm} onSubmit={handleSubmit}>
 
-               <input className={styles.topInput} id='name' type='email' placeholder='Name'
+               <input className={styles.topInput} id='name' type='text' placeholder='Name'
                       onChange={(e) => {setName(e.currentTarget.value)}}></input>
 
                <input className={styles.otherInputs} id='email' type='email' placeholder='Email'
