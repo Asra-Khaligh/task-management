@@ -32,3 +32,24 @@ a:link , a:visited
 {
  color: white;/* This will set the link color to blue for unvisited links, and red for visited links */
 }
+
+
+::-webkit-scrollbar 
+{
+ width: 5px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track 
+{
+ background: transparent;
+}
+::-webkit-scrollbar-thumb 
+{
+ background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover 
+{
+ background: rgb(255, 247, 249);
+}
